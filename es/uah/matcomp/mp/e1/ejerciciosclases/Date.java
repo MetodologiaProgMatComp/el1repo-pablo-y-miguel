@@ -43,7 +43,6 @@ public class Date {
         }else{
             System.out.println("Año no válido");
         }
-
     }
     public String toString(){
         return String.format("%02d/%02d/%04d",day, month, year);
