@@ -45,41 +45,37 @@ public class Time {
         }
     }
     public String toString(){
-        return String.format("%2b:%2b:%2b",hour, minute, second);
+        return String.format("%02d:%02d:%02d",hour, minute, second);
     }
     public Time nextSecond(){
-        this.hour= hour;
-        this.minute= minute;
-        this.second = second + 1;
+        second = second + 1;
         if (second>=60){
-            this.second = 0;
+            second = 0;
             minute= minute+1;
             if (minute >= 60){
-                this.minute = 0;
+                minute = 0;
                 hour = hour + 1;
                 if (hour >=24){
-                    this.hour= 0;
+                    hour= 0;
                 }
             }
         }
-        return hour, minute, second;
+        return this;
     }
-    public Time previusSecond(){
-        this.hour= hour;
-        this.minute= minute;
-        this.second = second - 1;
-        if (second<=0){
-            this.second = 0;
+    public Time previousSecond(){
+        second = second - 1;
+        if (second< 0){
+            second = 59;
             minute= minute - 1;
-            if (minute <= 0){
-                this.minute = 0;
+            if (minute < 0){
+                minute = 59;
                 hour = hour - 1;
-                if (hour <=0){
-                    this.hour= 0;
-                }
+                if (hour < 0){
+                    hour= 23;
+                };
             }
         }
-    return hour minute second;
+        return this;
     }
 
 }

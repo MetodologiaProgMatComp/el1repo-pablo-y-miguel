@@ -33,7 +33,8 @@ public class Employee {
         return salary * 12;
     }
     public int raiseSalary(int percent){
-        return ((percent*salary)/100 + salary);
+        this.salary= ((percent*salary)/100 + salary);
+        return salary;
     }
     public String toString(){
         return "Employee[id="+id+", name="+ getName()+",salary="+ salary +"]";
