@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases;
 
 public class TestAccount {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         // Test constructor and toString()
         Account a1 = new Account("A101", "Tan Ah Teck", 88);
         System.out.println(a1); // toString();
