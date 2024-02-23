@@ -29,10 +29,14 @@ class AccountTest {
     void getBalance() {
         String IDEsperado = "ID124";
         String nameEsperado = "Pablo";
-        int balanceEsperado = 3333;
-        Account nuevoAccount = new Account(IDEsperado, nameEsperado, balanceEsperado);
-        int balanceObtenido = nuevoAccount.getBalance();
-        Assertions.assertEquals(balanceEsperado, balanceObtenido);
+        int balanceEsperado1 = 3333;
+        int balanceEsperado2 = 0;
+        Account nuevoAccount1 = new Account(IDEsperado, nameEsperado, balanceEsperado1);
+        Account nuevoAccount2 = new Account(IDEsperado,nameEsperado); //balance = 0
+        int balanceObtenido1 = nuevoAccount1.getBalance();
+        int balanceObtenido2 = nuevoAccount2.getBalance();
+        Assertions.assertEquals(balanceEsperado1, balanceObtenido1);
+        Assertions.assertEquals(balanceEsperado2, balanceObtenido2);
     }
 
     @Test
@@ -62,10 +66,22 @@ class AccountTest {
     }
     @Test
     void transferTo() {
+
     }
 
     @Test
     void testToString() {
+        String IDEsperado = "ID124";
+        String nameEsperado = "Pablo";
+        int balanceEsperado = 3333;
+        String mensajeEsperado1 = "Account[id=ID124, name=Pablo, balance=3333]";
+        String mensajeEsperado2 = "Account[id=ID124, name=Pablo, balance=0]";
+        Account nuevoAccount1 = new Account(IDEsperado, nameEsperado, balanceEsperado);
+        Account nuevoAccount2 = new Account(IDEsperado, nameEsperado);
+        String mensajeObtenido1 = nuevoAccount1.toString();
+        String mensajeObtenido2 = nuevoAccount2.toString();
+        Assertions.assertEquals(mensajeEsperado1, mensajeObtenido1);
+        Assertions.assertEquals(mensajeEsperado2, mensajeObtenido2);
 
     }
 }
