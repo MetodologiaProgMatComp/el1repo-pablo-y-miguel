@@ -17,8 +17,8 @@ class CircleTest {
     @Test
     void setRadius() {
         double radioEsperado = 1.0;
-        double radioFinal = 5.0;
-        Circle nuevoCirculo = new Circle(radioFinal);
+        double radioInicial = 5.0;
+        Circle nuevoCirculo = new Circle(radioInicial);
         nuevoCirculo.setRadius(radioEsperado);
         double radioObtenido = nuevoCirculo.getRadius(); ;
         Assertions.assertEquals(radioEsperado,radioObtenido);
@@ -49,5 +49,4 @@ class CircleTest {
         String mensajeObtenido = nuevoCirculo.toString();
         Assertions.assertEquals(mensajeEsperado, mensajeObtenido);
     }
-
 }

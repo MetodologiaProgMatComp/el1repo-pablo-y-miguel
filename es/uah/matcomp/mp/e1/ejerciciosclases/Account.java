@@ -5,11 +5,10 @@ public class Account {
     private String name;
     private int balance = 0;
 
-    public Account(String id, String name) {
+    public Account(String id, String name) { //En esta "definición" de Account el balance = 0.
         this.id = id;
         this.name = name;
     }
-
     public Account(String id, String name, int balance) {
         this.id = id;
         this.name = name;
@@ -33,13 +32,11 @@ public class Account {
         return balance;
     }
 
-    public int debit(int amount) {
-        if (amount <= balance) {
-            this.balance = balance - amount;
-        } else  {
-            System.out.println("Amount exceeded balance");
+    public int debit(int amount) throws IllegalArgumentException{
+        if (amount > balance) {
+            throw new IllegalArgumentException("Amount exceeded balance");
         }
-        return balance;
+        return balance - amount;
     }
     public int transferTo(Account another, int amount){
         if (amount <= balance){
