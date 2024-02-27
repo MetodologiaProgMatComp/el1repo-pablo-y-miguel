@@ -69,3 +69,4 @@ public class Ball {
         return "Ball[("+x+","+y+"), speed=("+xDelta+","+yDelta+")]";
     }
 }
+
