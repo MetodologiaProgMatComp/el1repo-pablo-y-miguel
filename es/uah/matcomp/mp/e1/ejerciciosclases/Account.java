@@ -33,18 +33,17 @@ public class Account {
     }
 
     public int debit(int amount) {
-        if (amount > balance) {
-            String mensaje = "Amount exceeded balance";
-            int mensaje1 = Integer.parseInt(mensaje);
-            return mensaje1;
-        } else {
-            return balance - amount;
+        if (amount <= balance){
+            this.balance = balance - amount;
+        }else {
+            System.out.println("Amount exceeded balance");
         }
+        return balance;
     }
     public int transferTo(Account another, int amount){
         if (amount <= balance){
             another.balance = another.balance + amount;
-            balance = balance - amount;
+            this.balance = this.balance - amount;
         }else{
             System.out.println("Amount exceeded balance");
         }

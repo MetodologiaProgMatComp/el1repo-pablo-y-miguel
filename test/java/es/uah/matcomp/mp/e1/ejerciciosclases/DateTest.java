@@ -75,6 +75,20 @@ class DateTest {
 
     @Test
     void setDate() {
+        int dayEsperado = 23;
+        int monthEsperado = 6;
+        int yearEsperado = 2005;
+        int dayInicial = 26;
+        int monthInicial = 12;
+        int yearInicial = 1999;
+        Date nuevaDate = new Date(dayInicial, monthInicial, yearInicial);
+        nuevaDate.setDate(dayEsperado, monthEsperado, yearEsperado);
+        int dayObtenido = nuevaDate.getDay();
+        int monthObtenido = nuevaDate.getMonth();
+        int yearObtenido = nuevaDate.getYear();
+        Assertions.assertEquals(dayEsperado, dayObtenido);
+        Assertions.assertEquals(monthEsperado, monthObtenido);
+        Assertions.assertEquals(yearEsperado, yearObtenido);
     }
 
     @Test
