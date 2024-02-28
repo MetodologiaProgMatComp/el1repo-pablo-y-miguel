@@ -42,11 +42,10 @@ public class Book {
         this.qty = qty;
     }
     public String getAuthorName(){
-        author.getName();
-        author.getEmail();
-        String authorName =
+        String authorName = author.getName();
+        return authorName;
     }
     public String toString(){
-        return "Book[isbn="+isbn+","+author.toString()+",price="+price+",qty="+qty+"]";
+        return "Book[isbn="+isbn+",name="+name+","+author.toString()+",price="+price+",qty="+qty+"]";
     }
 }

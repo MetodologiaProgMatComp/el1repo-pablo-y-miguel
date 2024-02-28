@@ -3,12 +3,12 @@ package es.uah.matcomp.mp.e1.ejerciciosclases;
 public class Author {
     private String name;
     private String email;
-    public Author(String email, String name){
+    public Author(String name, String email){
         this.email = email;
         this.name = name;
     }
     public String getName() {
-        return name;
+        return this.name;
     }
     public String getEmail() {
         return email;
