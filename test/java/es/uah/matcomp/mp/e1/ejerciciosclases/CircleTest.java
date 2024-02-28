@@ -8,10 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class CircleTest {
     @Test
     public void getRadius() {
-        double radioEsperado = 1.0;
-        Circle nuevoCirculo = new Circle(radioEsperado);
-        double radioObtenido = nuevoCirculo.getRadius();
-        Assertions.assertEquals(radioEsperado,radioObtenido);
+        double radioEsperado1 = 1.0;
+        double radioEsperado2 = 2.0;
+        Circle nuevoCirculo1 = new Circle();
+        Circle nuevoCirculo2 = new Circle(radioEsperado2);
+        double radioObtenido1 = nuevoCirculo1.getRadius();
+        double radioObtenido2 = nuevoCirculo2.getRadius();
+        Assertions.assertEquals(radioEsperado2,radioObtenido2);
+        Assertions.assertEquals(radioEsperado1, radioObtenido1);
     }
 
     @Test

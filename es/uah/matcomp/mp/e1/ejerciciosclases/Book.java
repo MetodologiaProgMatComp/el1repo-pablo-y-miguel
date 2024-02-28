@@ -5,7 +5,7 @@ public class Book {
     private String name;
     private Author author;
     private double price;
-    private int qty = 0;
+    private int qty;
     public Book(String isbn, String name, Author author, double price){
         this.isbn = isbn;
         this.name = name;
