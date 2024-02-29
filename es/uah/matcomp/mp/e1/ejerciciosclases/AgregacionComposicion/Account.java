@@ -1,5 +1,4 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion;
-
 import java.text.DecimalFormat;
 
 public class Account {
@@ -38,18 +37,16 @@ public class Account {
         return customerName;
     }
     public Account deposit(double amount){
-        Account account = new Account(int id, Customer customer, double balance);
         balance = balance + amount;
-        return account;
+        return this;
     }
     public Account withdraw(double amount){
-        Account account = new Account(int id, Customer customer, double balance);
         if (balance >= amount){
             balance =- amount;
         }else{
             System.out.println("amount withdrawn exceeds the current balance!");
         }
-        return account;
+        return this;
     }
 }
 

@@ -16,10 +16,14 @@ public class Customer {
         return name;
     }
     public char getGender() {
-        if (gender == 'm' || gender =='f' );
+        if (gender == 'm' || gender =='f' ){
             return gender;
         }else {
+            System.out.println(gender+" no válido, ha de ser 'm' o 'f')");
             return '\0';
         }
+    }
+    public String toString (){
+        return name+"("+id+")";
     }
 }
