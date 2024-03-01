@@ -15,12 +15,15 @@ public class TestAccountCustomer {
         // Test Account class
         Account acc1 = new Account(123, c1, 3333);
         System.out.println(acc1);
-        acc1.setBalance (12233);
+        acc1.setBalance (122.36);
         System.out.println("id is: "+ acc1.getId());
         System.out.println("customer is:"+ acc1.getCustomer());
         System.out.println("customer's name is: " + acc1.getCustomerName());
-        System.out.println();
-
-
+        System.out.println(acc1.toString());
+        double amount = 120.32;
+        acc1.deposit(amount);
+        System.out.println("Account  after "+amount+" deposit is: "+acc1.toString());
+        acc1.withdraw(amount);
+        System.out.println("Account  after "+amount+" withdraw is: "+acc1.toString());
     }
 }

@@ -28,7 +28,7 @@ public class Account {
         this.balance = balance;
     }
     public String toString(){
-        DecimalFormat numeroDecimal = new DecimalFormat("x.xx");
+        DecimalFormat numeroDecimal = new DecimalFormat("0.00");
         String balanceRedondeado = numeroDecimal.format(balance);
         return customer.toString()+" balance ="+balanceRedondeado;
     }
@@ -42,9 +42,10 @@ public class Account {
     }
     public Account withdraw(double amount){
         if (balance >= amount){
-            balance =- amount;
+            balance = balance - amount;
         }else{
             System.out.println("amount withdrawn exceeds the current balance!");
+            return null;
         }
         return this;
     }
