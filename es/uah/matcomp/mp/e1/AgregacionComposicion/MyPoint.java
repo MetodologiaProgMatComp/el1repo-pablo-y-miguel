@@ -25,16 +25,16 @@ public class MyPoint {
     }
     public int[] getXY(){
         int[] XY = new  int[2];
-        XY[1] = x;
-        XY[2] = y;
+        XY[0] = x;
+        XY[1] = y;
         return XY;
     }
     public void setXY(int x, int y){
         this.x = x;
         this.y = y;
         int[] XY = new int[2];
-        XY[1] = x;
-        XY[2] = y;
+        XY[0] = x;
+        XY[1] = y;
     }
     public String toString(){
         return "("+x+","+y+")";

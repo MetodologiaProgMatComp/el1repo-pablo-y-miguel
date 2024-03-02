@@ -4,9 +4,43 @@ public class MyTriangle {
     private MyPoint v1;
     private MyPoint v2;
     private MyPoint v3;
-    public MyTriangle(int x1, int y1, int x2, int y2, int x3, int y3){}
-    public MyTriangle(MyPoint v1, MyPoint v2, MyPoint v3){}
-    public String toString(){}
-    public double getPerimeter(){}
-    public String getType(){}
+    public MyTriangle(int x1, int y1, int x2, int y2, int x3, int y3){
+        v1.setX(x1);
+        v1.setY(y1);
+        v2.setX(x2);
+        v2.setY(y2);
+        v3.setX(x3);
+        v3.setY(y3);
+    }
+    public MyTriangle(MyPoint v1, MyPoint v2, MyPoint v3){
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
+    }
+    public String toString(){
+        return "MyTriangle[v1="+v1.toString()+", v2="+v2.toString()+", v3="+v3.toString()+"]";
+    }
+    public double getPerimeter(){
+        double distanciav1v2 = v1.distance(v2);
+        double distanciav1v3 = v1.distance(v3);
+        double distanciav2v3 = v2.distance(v3);
+        double perimeter = distanciav1v2 + distanciav2v3 + distanciav1v3;
+        return perimeter;
+    }
+    public String getType(){
+        String equilatero = "Equilateral";
+        String escaleno = "Scalene";
+        String isosceles = "Isosceles";
+        double distanciav1v2 = v1.distance(v2);
+        double distanciav1v3 = v1.distance(v3);
+        double distanciav2v3 = v2.distance(v3);
+        if ((distanciav2v3 == distanciav1v3)||(distanciav2v3 == distanciav1v2)||(distanciav1v3 == distanciav1v2)){
+            return isosceles;
+        }
+        if ((distanciav2v3 == distanciav1v3)&&(distanciav2v3 == distanciav1v2)){
+            return equilatero;
+        }else{
+            return escaleno;
+        }
+    }
 }
