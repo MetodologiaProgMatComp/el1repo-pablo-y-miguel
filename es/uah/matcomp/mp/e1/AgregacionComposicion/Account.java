@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion;
+package es.uah.matcomp.mp.e1.AgregacionComposicion;
 import java.text.DecimalFormat;
 
 public class Account {

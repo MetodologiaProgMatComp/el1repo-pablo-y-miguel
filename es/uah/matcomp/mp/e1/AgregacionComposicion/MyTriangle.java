@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion;
+package es.uah.matcomp.mp.e1.AgregacionComposicion;
 
 public class MyTriangle {
     private MyPoint v1;

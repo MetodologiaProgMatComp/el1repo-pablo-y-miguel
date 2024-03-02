@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion;
+package es.uah.matcomp.mp.e1.AgregacionComposicion;
 
 public class Customer {
     private int id;

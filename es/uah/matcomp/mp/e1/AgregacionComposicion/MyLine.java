@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion;
+package es.uah.matcomp.mp.e1.AgregacionComposicion;
 
 public class MyLine {
     private MyPoint begin;
@@ -28,10 +28,10 @@ public class MyLine {
     public void setEndX(){}
     public int getEndY(){}
     public void setEndY(){}
-    public int[2] getBeginXY(){}
+    public int[] getBeginXY(){}
     public void setBeginXT(){
     }
-    public int[2] getEndXY(){}
+    public int[] getEndXY(){}
     public void setEndXY(){}
     public double getLength(){}
     public double getGradient(){}

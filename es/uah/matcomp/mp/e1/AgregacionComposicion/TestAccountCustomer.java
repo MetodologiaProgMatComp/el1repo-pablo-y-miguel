@@ -1,7 +1,5 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion;
+package es.uah.matcomp.mp.e1.AgregacionComposicion;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion.Customer;
-import es.uah.matcomp.mp.e1.ejerciciosclases.AgregacionComposicion.Account;
 public class TestAccountCustomer {
     public static void main(String[] args){
         //Test Customer class
