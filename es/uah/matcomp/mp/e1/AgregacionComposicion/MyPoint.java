@@ -24,7 +24,7 @@ public class MyPoint {
         this.y = y;
     }
     public int[] getXY(){
-        int[] XY = new  int[2];
+        int[] XY = new int[2];
         XY[0] = x;
         XY[1] = y;
         return XY;
