@@ -20,5 +20,4 @@ public class TestMyPoint {
             System.out.println();
         }
     }
-
 }

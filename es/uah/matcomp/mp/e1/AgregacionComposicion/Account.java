@@ -37,7 +37,7 @@ public class Account {
         return customerName;
     }
     public Account deposit(double amount){
-        balance = balance + amount;
+        this.balance = balance + amount;
         return this;
     }
     public Account withdraw(double amount){

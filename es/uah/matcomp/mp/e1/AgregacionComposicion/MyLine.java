@@ -4,13 +4,14 @@ public class MyLine {
     private MyPoint begin;
     private MyPoint end;
     public MyLine(int x1, int y1, int x2, int y2){
-        begin.setX(x1);
-        begin.setY(y1);
-        end.setX(x2);
-        end.setY(y2);
+        this.begin = new MyPoint(x1, y1);
+        this.end = new MyPoint(x2, y2);
     }
-    public MyLine(MyPoint begin, MyPoint end){}
-    public MyPoint getBegin() {
+    public MyLine(MyPoint begin, MyPoint end){
+        this.begin = begin;
+        this.end = end;
+    }
+    public MyPoint getBegin(){
         return begin;
     }
     public void setBegin(MyPoint begin) {
@@ -83,7 +84,7 @@ public class MyLine {
         return gradient;
     }
     public String toString(){
-        return "MyLine[begin="+begin.toString()+", end("+end.toString()+"]";
+        return "MyLine[begin="+begin.toString()+", end="+end.toString()+"]";
     }
 
 }

@@ -10,8 +10,7 @@ public class MyCircle {
     }
 
     public MyCircle(int x, int y, int radius) {
-        center.setX(x);
-        center.setY(y);
+        this.center = new MyPoint(x, y);
         this.radius = radius;
     }
 
@@ -53,8 +52,7 @@ public class MyCircle {
         return centerXY;
     }
     public void setCenterXY(int x, int y){
-        center.setX(x);
-        center.setY(y);
+        this.center=new MyPoint(x,y);
         int[] centerXY = new int[2];
         centerXY[0] = getCenterX();
         centerXY[1] = getCenterY();

@@ -39,12 +39,12 @@ public class MyPoint {
     public String toString(){
         return "("+x+","+y+")";
     }
-    public double distance(int y, int x){
-       double distancia1 = Math.sqrt(Math.pow(this.x - x, 2)+-Math.pow(this.y - y, 2));
-       return distancia1;
+    public double distance(int x, int y){
+       double distancia = Math.sqrt(Math.pow(this.x - x, 2)+Math.pow(this.y - y, 2));
+       return distancia;
     }
     public double distance(MyPoint another){
-        return distance(another.x, another.y);
+        return distance(another.getX(), another.getY());
     }
     public double distance(){
         return distance(0, 0);
